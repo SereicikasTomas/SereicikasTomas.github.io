@@ -14,19 +14,19 @@
         opacity: 1;
         width: 1px;
         height: 1px;
-        overflow-y: hidden;
+        text-overflow: ellipsis;
     }
     50%{
         opacity: 1;
         width: 90%;
         height: 1px;
-        overflow-y: hidden;
+        text-overflow: ellipsis;
     }
     100%{
         opacity: 1;
         width: 90%;
         height: 220px;
-        overflow-y: hidden;
+        text-overflow: ellipsis;
     }
 }
 
