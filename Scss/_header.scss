@@ -43,6 +43,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        p{
+            opacity: 0;
+            animation-name: appear;
+            animation-delay: 2.5s;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
     }
     
     #links {
