@@ -1,0 +1,73 @@
+//Animations//
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide{
+    0%{
+        opacity: 1;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+    50%{
+        width: 90%;
+        height: 1px;
+    }
+    100%{
+        opacity: 1;
+        width: 90%;
+        height: 220px;
+        overflow: hidden;
+    }
+}
+
+  
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform:scale(0);
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+  
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform:scale(1);
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform:scale(0);
+    }
+}
+
+@keyframes hoverSlide{
+    0%{
+        left: -140%;
+        top: 110%;
+    }
+    50%{
+        left: 0%;
+        top: -40%;
+    }
+    100%{
+        left: -20%;
+        top: -20%;
+    }
+}

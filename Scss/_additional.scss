@@ -1,0 +1,17 @@
+//Style//
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#particles-js{
+    background: radial-gradient(
+        rgba(0, 105, 117, .9), 
+        rgba(255, 255, 255, 0)
+      ), url('../images/universe.jpg') center center;
+    background-size: cover;
+    height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+}

@@ -1,0 +1,14 @@
+#footer{
+    text-transform: uppercase;
+    text-align: center;
+    width: 60%;
+    letter-spacing: 3px;
+    font-size: 9px;
+    position: absolute;
+    @include center_pos;
+    bottom: 3%;
+    color: $primary_color;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}

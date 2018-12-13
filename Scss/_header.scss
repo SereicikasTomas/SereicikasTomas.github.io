@@ -1,0 +1,86 @@
+#header{
+    @include center_pos;
+    text-transform: uppercase;
+    top: 47%;
+    text-align: center;
+    position: absolute;
+    width: 480px;
+    #name {
+        color: $primary_color;
+        animation-name: appear;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        letter-spacing: 5px;
+        border-top: $border_params;
+        border-bottom: $border_params;
+        border-radius: $border_radius;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        h1  {
+            margin: 8px 0 8px 3px;
+        }
+        &::after {
+            @include horizontal_line;
+            top: 100%;
+        }
+    }
+    
+    #inner {
+        color: $primary_color;
+        height: 0px;
+        opacity: 0;
+        margin: 8vh auto 0;
+        letter-spacing: 5px;
+        font-size: 11px;
+        animation-name: slide;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        border-top: $border_params;
+        border-bottom: $border_params;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    #links {
+        position: relative;
+        margin: 8vh auto 0;
+        border: $border_params;
+        border-radius: $border_radius;
+        width: 100%;
+        animation-name: appear;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        ul {
+            list-style-type: none;
+            display: flex;
+            li {
+                border-left: $border_params;
+                width: 25%;
+                height: 45px;
+                font-size: 11px;
+                padding: 17px 0;
+                color: $primary_color;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                transition: $transition_ease;
+                cursor: pointer;
+                &:hover{
+                    background: $primary_color;
+                    color: $secondary_color;
+                }
+                &:first-child {
+                    border-left: 0;
+                }
+            }
+        }
+        &::before {
+            @include horizontal_line;
+            bottom: 100%;
+        }
+    }
+}
