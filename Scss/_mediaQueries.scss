@@ -114,9 +114,8 @@
     }
 }
 
-@media only screen and (max-width: 480px){
+@media (max-width: 480px){
     #header{
-        top: 30%;
         width: 95vw;
         #name{
             font-size: 10px;
@@ -195,8 +194,5 @@
                 }
             }
         }
-    }
-    #footer{
-        bottom: 1%;
     }
 }
