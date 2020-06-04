@@ -243,18 +243,17 @@
             justify-content: center;
             a {
               margin: 25px 10px;
-              height: 75px;
-              width: 75px;
-              text-align: center;
-              display: block;
+              padding: 15px;
+              display: flex;
               border-radius: $border_radius;
               border: $border_params;
               position: relative;
               overflow: hidden;
               color: $primary_color;
-              i {
-                font-size: 50px;
-                line-height: 75px;
+              svg {
+                margin: auto;
+                height: 50px;
+                width: 50px;
                 transition: $transition_ease;
               }
               &:hover #linkedIn {
