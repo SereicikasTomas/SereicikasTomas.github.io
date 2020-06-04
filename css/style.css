@@ -402,7 +402,7 @@ template {
 }
 
 #header #name::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -503,7 +503,7 @@ template {
 }
 
 #header #links::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -526,27 +526,27 @@ template {
 }
 
 #main #modal-intro.in {
-  -webkit-animation: zoomIn .5s ease-out forwards;
-          animation: zoomIn .5s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s ease-out forwards;
+          animation: zoomIn 0.5s ease-out forwards;
 }
 
 #main #modal-intro.in .modal-background .modal {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: zoomIn .5s .25s ease-out forwards;
-          animation: zoomIn .5s .25s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s 0.25s ease-out forwards;
+          animation: zoomIn 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-intro.in.out {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: zoomOut .5s .25s ease-out forwards;
-          animation: zoomOut .5s .25s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s 0.25s ease-out forwards;
+          animation: zoomOut 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-intro.in.out .modal-background .modal {
-  -webkit-animation: zoomOut .5s ease-out forwards;
-          animation: zoomOut .5s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s ease-out forwards;
+          animation: zoomOut 0.5s ease-out forwards;
 }
 
 #main #modal-intro .modal-background {
@@ -568,7 +568,6 @@ template {
   max-height: 600px;
   width: 60vw;
   height: 80vh;
-  overflow: auto;
 }
 
 #main #modal-intro .modal-background .modal header {
@@ -637,27 +636,27 @@ template {
 }
 
 #main #modal-work.in {
-  -webkit-animation: zoomIn .5s ease-out forwards;
-          animation: zoomIn .5s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s ease-out forwards;
+          animation: zoomIn 0.5s ease-out forwards;
 }
 
 #main #modal-work.in .modal-background .modal {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: zoomIn .5s .25s ease-out forwards;
-          animation: zoomIn .5s .25s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s 0.25s ease-out forwards;
+          animation: zoomIn 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-work.in.out {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: zoomOut .5s .25s ease-out forwards;
-          animation: zoomOut .5s .25s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s 0.25s ease-out forwards;
+          animation: zoomOut 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-work.in.out .modal-background .modal {
-  -webkit-animation: zoomOut .5s ease-out forwards;
-          animation: zoomOut .5s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s ease-out forwards;
+          animation: zoomOut 0.5s ease-out forwards;
 }
 
 #main #modal-work .modal-background {
@@ -679,7 +678,6 @@ template {
   max-height: 600px;
   width: 60vw;
   height: 80vh;
-  overflow: auto;
 }
 
 #main #modal-work .modal-background .modal header {
@@ -721,6 +719,8 @@ template {
 }
 
 #main #modal-work .modal-background .modal #work-main {
+  height: 90%;
+  overflow: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -839,7 +839,8 @@ template {
   color: #006975;
 }
 
-#main #modal-work .modal-background .modal #work-main .container:hover .button-live, #main #modal-work .modal-background .modal #work-main .container:hover .button-code {
+#main #modal-work .modal-background .modal #work-main .container:hover .button-live,
+#main #modal-work .modal-background .modal #work-main .container:hover .button-code {
   opacity: 1;
 }
 
@@ -856,27 +857,27 @@ template {
 }
 
 #main #modal-about.in {
-  -webkit-animation: zoomIn .5s ease-out forwards;
-          animation: zoomIn .5s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s ease-out forwards;
+          animation: zoomIn 0.5s ease-out forwards;
 }
 
 #main #modal-about.in .modal-background .modal {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: zoomIn .5s .25s ease-out forwards;
-          animation: zoomIn .5s .25s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s 0.25s ease-out forwards;
+          animation: zoomIn 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-about.in.out {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: zoomOut .5s .25s ease-out forwards;
-          animation: zoomOut .5s .25s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s 0.25s ease-out forwards;
+          animation: zoomOut 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-about.in.out .modal-background .modal {
-  -webkit-animation: zoomOut .5s ease-out forwards;
-          animation: zoomOut .5s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s ease-out forwards;
+          animation: zoomOut 0.5s ease-out forwards;
 }
 
 #main #modal-about .modal-background {
@@ -898,7 +899,6 @@ template {
   max-height: 600px;
   width: 60vw;
   height: 80vh;
-  overflow: auto;
 }
 
 #main #modal-about .modal-background .modal header {
@@ -939,6 +939,11 @@ template {
   border-bottom: 1px solid white;
 }
 
+#main #modal-about .modal-background .modal #about-main {
+  height: 90%;
+  overflow: auto;
+}
+
 #main #modal-about .modal-background .modal #about-main h2 {
   text-transform: uppercase;
   font-weight: 200;
@@ -949,7 +954,7 @@ template {
 }
 
 #main #modal-about .modal-background .modal #about-main #timeline {
-  padding-left: 25px;
+  padding-left: 45px;
 }
 
 #main #modal-about .modal-background .modal #about-main #timeline .timeline-event {
@@ -975,7 +980,7 @@ template {
 
 #main #modal-about .modal-background .modal #about-main #timeline .timeline-event:before {
   background-color: white;
-  content: '';
+  content: "";
   margin-left: -1px;
   position: absolute;
   top: 0;
@@ -1027,163 +1032,6 @@ template {
   color: white;
 }
 
-#main #modal-about .modal-background .modal #about-main #skills {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container {
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 5px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container h3 {
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 16px;
-  margin-bottom: 10px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul li {
-  position: relative;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul li p {
-  opacity: 0;
-  background-color: #006975;
-  color: white;
-  padding: 5px;
-  border-radius: 4px;
-  position: absolute;
-  z-index: 1;
-  font-size: 16px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  top: 110%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul li p::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent #006975 transparent;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul li i {
-  font-size: 48px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container ul li:hover p {
-  opacity: 1;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover {
-  background: white;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover h3 {
-  color: #006975;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-html5 {
-  color: #e44d26;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-css3 {
-  color: #2174b7;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-javascript {
-  color: #f7df1e;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-php {
-  color: #777bb3;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-c {
-  color: #5c6bc0;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-sass {
-  color: #ce679a;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-reactjs {
-  color: #61d9fb;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-jquery {
-  color: #7ad0f3;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-bootstrap {
-  color: #563d7c;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-laravel {
-  color: #fb503b;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-symfony {
-  color: black;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-apache {
-  color: #26235b;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-mysql {
-  color: #00618a;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-wordpress {
-  color: black;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .fa-windows {
-  color: #0fb6f1;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .icon-ubuntu {
-  color: #dd4814;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .fa-bitbucket {
-  color: #0052cc;
-}
-
-#main #modal-about .modal-background .modal #about-main #skills .skill-container:hover ul li .fa-github {
-  color: black;
-}
-
 #main #modal-contact {
   position: fixed;
   display: table;
@@ -1197,27 +1045,27 @@ template {
 }
 
 #main #modal-contact.in {
-  -webkit-animation: zoomIn .5s ease-out forwards;
-          animation: zoomIn .5s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s ease-out forwards;
+          animation: zoomIn 0.5s ease-out forwards;
 }
 
 #main #modal-contact.in .modal-background .modal {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: zoomIn .5s .25s ease-out forwards;
-          animation: zoomIn .5s .25s ease-out forwards;
+  -webkit-animation: zoomIn 0.5s 0.25s ease-out forwards;
+          animation: zoomIn 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-contact.in.out {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: zoomOut .5s .25s ease-out forwards;
-          animation: zoomOut .5s .25s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s 0.25s ease-out forwards;
+          animation: zoomOut 0.5s 0.25s ease-out forwards;
 }
 
 #main #modal-contact.in.out .modal-background .modal {
-  -webkit-animation: zoomOut .5s ease-out forwards;
-          animation: zoomOut .5s ease-out forwards;
+  -webkit-animation: zoomOut 0.5s ease-out forwards;
+          animation: zoomOut 0.5s ease-out forwards;
 }
 
 #main #modal-contact .modal-background {
@@ -1239,7 +1087,6 @@ template {
   max-height: 600px;
   width: 60vw;
   height: 80vh;
-  overflow: auto;
 }
 
 #main #modal-contact .modal-background .modal header {

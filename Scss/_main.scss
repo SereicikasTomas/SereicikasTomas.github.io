@@ -1,413 +1,295 @@
-#main{
-    #modal-intro {
-        @include modalWhole;
-        @include modalAnimations;
-        .modal-background {
-            @include modalBackground;
-            .modal {
-                @include modalInner;
-                header{
-                    @include modalHeader;
-                }
-                #intro-main{
-                    img{
-                        width: 30%;
-                        float: left;
-                        margin: 0 20px 20px 0;
-                    }
-                    p {
-                        font-size:15px;
-                        line-height: 1.5;
-                        &:nth-child(2){
-                            padding-bottom: 20px;
-                        }
-                    }
-                }
-            }
+#main {
+  #modal-intro {
+    @include modalWhole;
+    @include modalAnimations;
+    .modal-background {
+      @include modalBackground;
+      .modal {
+        @include modalInner;
+        header {
+          @include modalHeader;
         }
+        #intro-main {
+          img {
+            width: 30%;
+            float: left;
+            margin: 0 20px 20px 0;
+          }
+          p {
+            font-size: 15px;
+            line-height: 1.5;
+            &:nth-child(2) {
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
     }
-    #modal-work {
-        @include modalWhole;
-        @include modalAnimations;
-        .modal-background {
-            @include modalBackground;
-            .modal {
-                @include modalInner;
-                header{
-                    @include modalHeader;
-                }
-                #work-main{
-                    display: grid;
-                    grid-template-columns: 50% 50%;
-                    .container{
-                        position: relative;
-                        margin: 2.5px 5px;
-                        img{
-                            width: 100%;
-                        }
-                        .overlay {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(0, 0, 0, .2);
-                            transition: $transition_ease;
-                        }
-                        &:hover .overlay {
-                            display: block;
-                            background: rgba(0, 0, 0, .8);
-                        }
-                        .title {
-                            position: absolute;
-                            width: 100%;
-                            text-align: center;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                            font-size: 24px;
-                            text-transform: uppercase;
-                            z-index: 1;
-                            transition: $transition_ease;
-                            background: rgba(0, 0, 0, .8);
-                        }
-                          
-                        &:hover .title {
-                            background: rgba(0, 0, 0, 0);
-                            top: 30%;
-                        }
+  }
+  #modal-work {
+    @include modalWhole;
+    @include modalAnimations;
+    .modal-background {
+      @include modalBackground;
+      .modal {
+        @include modalInner;
+        header {
+          @include modalHeader;
+        }
+        #work-main {
+          height: 90%;
+          overflow: auto;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          .container {
+            position: relative;
+            margin: 2.5px 5px;
+            img {
+              width: 100%;
+            }
+            .overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.2);
+              transition: $transition_ease;
+            }
+            &:hover .overlay {
+              display: block;
+              background: rgba(0, 0, 0, 0.8);
+            }
+            .title {
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 24px;
+              text-transform: uppercase;
+              z-index: 1;
+              transition: $transition_ease;
+              background: rgba(0, 0, 0, 0.8);
+            }
 
-                        .button-live {
-                            left: 30%;
-                            @include workButton;
-                            @include workButtonAnchor;
-                        }
+            &:hover .title {
+              background: rgba(0, 0, 0, 0);
+              top: 30%;
+            }
 
-                        .button-code {
-                            left: 70%;
-                            @include workButton;
-                            @include workButtonAnchor;
-                        }
-                          
-                        &:hover .button-live, &:hover .button-code{
-                            opacity: 1;
-                        }
-                    }
-                }
+            .button-live {
+              left: 30%;
+              @include workButton;
+              @include workButtonAnchor;
             }
-        }
-    }
-    #modal-about {
-        @include modalWhole;
-        @include modalAnimations;
-        .modal-background {
-            @include modalBackground;
-            .modal {
-                @include modalInner;
-                header{
-                    @include modalHeader;
-                }
-                #about-main{
-                    h2 {
-                        text-transform: uppercase;
-                        font-weight: 200;
-                        font-size: 20px;
-                        letter-spacing: 5px;
-                        border-bottom: $border_params;
-                        margin-bottom: 20px;
-                    }
-                    #timeline {
-                        padding-left: 25px;
-                        .timeline-event {
-                            list-style-type: none;
-                            position: relative;
-                            margin-bottom: 25px;
-                            .timeline-event-icon {
-                                background-color: $secondary_color;
-                                outline: 5px solid $primary_color;
-                                display: block;
-                                position: absolute;
-                                top: 4px;
-                                left: -30px;
-                                width: 10px;
-                                height: 10px;
-                                transform: rotate(45deg);
-                                transition: $transition_ease;
-                            }
-                            &:before {
-                                background-color: $primary_color;
-                                content: '';
-                                margin-left: -1px;
-                                position: absolute;
-                                top: 0;
-                                left: -25px;
-                                width: 2px;
-                                height: 98%;
-                                transition: $transition_ease;
-                            }
-                            .timeline-event-copy{
-                                .timeline-event-thumbnail{
-                                    background: $primary_color;
-                                    color: $secondary_color;
-                                    display: inline;
-                                    padding: 3px;
-                                    border-radius: $border_radius;
-                                    transition: $transition_ease;
-                                }
-                                h3{
-                                    margin-top: 10px;
-                                    font-weight: 100;
-                                }
-                                h4{
-                                    margin-top: 10px;
-                                    font-weight: 100;
-                                }
-                                ul{
-                                    padding-left: 20px;
-                                    line-height: 1.5;
-                                }
-                            }
-                            &:hover{
-                                .timeline-event-icon{
-                                    transform: rotate(0deg);
-                                    background-color: $primary_color;
-                                    outline: 5px solid $secondary_color;
-                                }
-                                &:before {
-                                    background-color: $secondary_color;
-                                }
-                                .timeline-event-copy{
-                                    .timeline-event-thumbnail{
-                                        background: $secondary_color;
-                                        color: $primary_color;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    #skills{
-                        display: grid;
-                        grid-template-columns: 100%; 
-                        .skill-container{
-                            border: $border_params;
-                            border-radius: $border_radius;
-                            padding: 10px;
-                            margin: 5px;
-                            transition: $transition_ease;
-                            h3{
-                                text-transform: uppercase;
-                                font-weight: 200;
-                                font-size: 16px;
-                                margin-bottom: 10px;
-                                transition: $transition_ease;
-                            }
-                            ul{
-                                display: flex;
-                                list-style-type: none;
-                                justify-content: space-between;
-                                li{
-                                    position: relative;
-                                    p{
-                                        opacity: 0;
-                                        background-color: $secondary_color;
-                                        color: $primary_color;
-                                        padding: 5px;
-                                        border-radius: 4px;
-                                        position: absolute;
-                                        z-index: 1;
-                                        font-size: 16px;
-                                        transition: $transition_ease;
-                                        top: 110%;
-                                        left: 50%;
-                                        transform: translateX(-50%);
-                                        &::after {
-                                            content: " ";
-                                            position: absolute;
-                                            bottom: 100%;
-                                            left: 50%;
-                                            margin-left: -5px;
-                                            border-width: 5px;
-                                            border-style: solid;
-                                            border-color: transparent transparent $secondary_color transparent;
-                                        }
-                                    }
-                                    i{
-                                        font-size: 48px;
-                                        transition: $transition_ease;
-                                    }
-                                    &:hover{
-                                        p{
-                                            opacity: 1;
-                                        }
-                                    }
-                                }
-                            }
-                            &:hover{
-                                background: $primary_color;
-                                h3{
-                                    color: $secondary_color;
-                                }
-                                ul{
-                                    li{
-                                        .icon-html5{
-                                            color: rgb(228, 77, 38);
-                                        }
-                                        .icon-css3{
-                                            color: rgb(33, 116, 183);
-                                        }
-                                        .icon-javascript{ 
-                                            color:rgb(247, 223, 30);
-                                        }
-                                        .icon-php{ 
-                                            color:rgb(119, 123, 179);
-                                        }
-                                        .icon-c{ 
-                                            color:rgb(92, 107, 192);
-                                        }
-                                        .icon-sass{ 
-                                            color:rgb(206, 103, 154);
-                                        }
-                                        .icon-reactjs{ 
-                                            color:rgb(97, 217, 251);
-                                        }
-                                        .icon-jquery{ 
-                                            color:rgb(122, 208, 243);
-                                        }
-                                        .icon-bootstrap{ 
-                                            color:rgb(86, 61, 124);
-                                        }
-                                        .icon-laravel{ 
-                                            color:rgb(251, 80, 59);
-                                        }
-                                        .icon-symfony{ 
-                                            color:rgb(0, 0, 0);
-                                        }
-                                        .icon-apache{
-                                            color: rgb(38, 35, 91);
-                                        }
-                                        .icon-mysql{ 
-                                            color:rgb(0, 97, 138);
-                                        }
-                                        .icon-wordpress{ 
-                                            color:rgb(0, 0, 0);
-                                        }
-                                        .fa-windows{ 
-                                            color:rgb(15, 182, 241);
-                                        }
-                                        .icon-ubuntu{ 
-                                            color:rgb(221, 72, 20);
-                                        }
-                                        .fa-bitbucket{ 
-                                            color:rgb(0, 82, 204);
-                                        }
-                                        .fa-github{ 
-                                            color:rgb(0, 0, 0);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+
+            .button-code {
+              left: 70%;
+              @include workButton;
+              @include workButtonAnchor;
             }
-        }
-    }
-    #modal-contact {
-        @include modalWhole;
-        @include modalAnimations;
-        .modal-background {
-            @include modalBackground;
-            .modal {
-                @include modalInner;
-                header{
-                    @include modalHeader;
-                }
-                #contact-main{
-                    text-align: center;
-                    #email{
-                        margin-top: 10vh;
-                        margin-bottom: 50px;
-                        h3{
-                            display: inline-block;
-                            border-bottom: $border_params;
-                            font-weight: 100;
-                            font-size: 24px;
-                            letter-spacing: 5px;
-                            margin-bottom: 25px;
-                        }
-                        a{
-                            display: block;
-                            text-decoration: none;
-                            font-size: 22px;
-                            letter-spacing: 5px;
-                            font-weight: 100;
-                            color: $primary_color;
-                            transition: $transition_ease;
-                            &:hover{
-                                color: $secondary_color;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                    #social-h{
-                        display: inline;
-                        border-bottom: $border_params;
-                        font-weight: 100;
-                        font-size: 24px;
-                        letter-spacing: 5px;
-                    }
-                    #social {
-                        display: flex;
-                        justify-content: center;
-                        a{
-                            margin: 25px 10px;
-                            height: 75px;
-                            width: 75px;
-                            text-align: center;
-                            display: block;
-                            border-radius: $border_radius;
-                            border: $border_params;
-                            position: relative;
-                            overflow: hidden;
-                            color: $primary_color;
-                            i{
-                                font-size: 50px;
-                                line-height: 75px;
-                                transition: $transition_ease;
-                            }
-                            &:hover #linkedIn{
-                                color: rgb(0, 119, 181);
-                                transform: scale(1.2);
-                            }
-                            &:hover #gitHub{
-                                color: rgb(110,84,148);
-                                transform: scale(1.2);
-                            }
-                            &:hover #codePen{
-                                color: rgb(252,208,0);
-                                transform: scale(1.2);
-                            }
-                            &::before{
-                                content: "";
-                                position: absolute;
-                                width: 140%;
-                                height: 140%;
-                                background: $primary_color;
-                                transform: rotate(45deg);
-                                left: -140%;
-                                top: 110%;
-                            }
-                            &:hover::before{
-                                animation-name: hoverSlide;
-                                animation-duration: 1s;
-                                animation-timing-function: ease;
-                                top: -20%;
-                                left: -20%;
-                            }
-                        }
-                    }
-                }
+
+            &:hover .button-live,
+            &:hover .button-code {
+              opacity: 1;
             }
+          }
         }
+      }
     }
+  }
+  #modal-about {
+    @include modalWhole;
+    @include modalAnimations;
+    .modal-background {
+      @include modalBackground;
+      .modal {
+        @include modalInner;
+        header {
+          @include modalHeader;
+        }
+        #about-main {
+          height: 90%;
+          overflow: auto;
+          h2 {
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 20px;
+            letter-spacing: 5px;
+            border-bottom: $border_params;
+            margin-bottom: 20px;
+          }
+          #timeline {
+            padding-left: 45px;
+            .timeline-event {
+              list-style-type: none;
+              position: relative;
+              margin-bottom: 25px;
+              .timeline-event-icon {
+                background-color: $secondary_color;
+                outline: 5px solid $primary_color;
+                display: block;
+                position: absolute;
+                top: 4px;
+                left: -30px;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                transition: $transition_ease;
+              }
+              &:before {
+                background-color: $primary_color;
+                content: "";
+                margin-left: -1px;
+                position: absolute;
+                top: 0;
+                left: -25px;
+                width: 2px;
+                height: 98%;
+                transition: $transition_ease;
+              }
+              .timeline-event-copy {
+                .timeline-event-thumbnail {
+                  background: $primary_color;
+                  color: $secondary_color;
+                  display: inline;
+                  padding: 3px;
+                  border-radius: $border_radius;
+                  transition: $transition_ease;
+                }
+                h3 {
+                  margin-top: 10px;
+                  font-weight: 100;
+                }
+                h4 {
+                  margin-top: 10px;
+                  font-weight: 100;
+                }
+                ul {
+                  padding-left: 20px;
+                  line-height: 1.5;
+                }
+              }
+              &:hover {
+                .timeline-event-icon {
+                  transform: rotate(0deg);
+                  background-color: $primary_color;
+                  outline: 5px solid $secondary_color;
+                }
+                &:before {
+                  background-color: $secondary_color;
+                }
+                .timeline-event-copy {
+                  .timeline-event-thumbnail {
+                    background: $secondary_color;
+                    color: $primary_color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #modal-contact {
+    @include modalWhole;
+    @include modalAnimations;
+    .modal-background {
+      @include modalBackground;
+      .modal {
+        @include modalInner;
+        header {
+          @include modalHeader;
+        }
+        #contact-main {
+          text-align: center;
+          #email {
+            margin-top: 10vh;
+            margin-bottom: 50px;
+            h3 {
+              display: inline-block;
+              border-bottom: $border_params;
+              font-weight: 100;
+              font-size: 24px;
+              letter-spacing: 5px;
+              margin-bottom: 25px;
+            }
+            a {
+              display: block;
+              text-decoration: none;
+              font-size: 22px;
+              letter-spacing: 5px;
+              font-weight: 100;
+              color: $primary_color;
+              transition: $transition_ease;
+              &:hover {
+                color: $secondary_color;
+                text-decoration: underline;
+              }
+            }
+          }
+          #social-h {
+            display: inline;
+            border-bottom: $border_params;
+            font-weight: 100;
+            font-size: 24px;
+            letter-spacing: 5px;
+          }
+          #social {
+            display: flex;
+            justify-content: center;
+            a {
+              margin: 25px 10px;
+              height: 75px;
+              width: 75px;
+              text-align: center;
+              display: block;
+              border-radius: $border_radius;
+              border: $border_params;
+              position: relative;
+              overflow: hidden;
+              color: $primary_color;
+              i {
+                font-size: 50px;
+                line-height: 75px;
+                transition: $transition_ease;
+              }
+              &:hover #linkedIn {
+                color: rgb(0, 119, 181);
+                transform: scale(1.2);
+              }
+              &:hover #gitHub {
+                color: rgb(110, 84, 148);
+                transform: scale(1.2);
+              }
+              &:hover #codePen {
+                color: rgb(252, 208, 0);
+                transform: scale(1.2);
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                width: 140%;
+                height: 140%;
+                background: $primary_color;
+                transform: rotate(45deg);
+                left: -140%;
+                top: 110%;
+              }
+              &:hover::before {
+                animation-name: hoverSlide;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                top: -20%;
+                left: -20%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

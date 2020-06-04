@@ -1,144 +1,141 @@
 //Mixins//
-@mixin center_pos{
-    transform: translate(-50%, -50%);
-    left: 50%;
+@mixin center_pos {
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
-@mixin horizontal_line{
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50%;
-    width: 1px;
-    height: calc(8vh + 1px);
-    background: $primary_color;
+@mixin horizontal_line {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: calc(8vh + 1px);
+  background: $primary_color;
 }
 
-@mixin modalWhole{
-    position:fixed;
-    display:table;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-    transform:scale(0);
-    z-index:1;
+@mixin modalWhole {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
 }
 
-@mixin modalAnimations{
-    &.in {
-        animation:zoomIn .5s ease-out forwards;
-        .modal-background {
-            .modal {
-            transform:scale(0);
-            animation: zoomIn .5s .25s ease-out forwards;
-            }
-        }
-        &.out {
-            transform:scale(1);
-            animation:zoomOut .5s .25s ease-out forwards;
-            .modal-background {
-                .modal {
-                    animation: zoomOut .5s ease-out forwards;
-                }
-            }
-        }
+@mixin modalAnimations {
+  &.in {
+    animation: zoomIn 0.5s ease-out forwards;
+    .modal-background {
+      .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.25s ease-out forwards;
+      }
     }
-}
-
-@mixin modalBackground{
-    display:table-cell;
-    background:radial-gradient(
-        rgba(0, 105, 117, .9), 
-        rgba(255, 255, 255, 0));
-    text-align:center;
-    vertical-align:middle;
-}
-
-@mixin modalInner{
-    color: $primary_color;
-    background:rgba(0,0,0,.8);
-    padding:50px;
-    display:inline-block;
-    border-radius:$border_radius;
-    position:relative;
-    text-align: left;
-    max-width: 800px;
-    max-height: 600px;
-    width: 60vw;
-    height: 80vh;
-    overflow: auto;
-}
-
-@mixin modalHeader{
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    margin-bottom: 25px;
-    .close{
-        font-size: 16px;
-        padding: 11px 10px;
-        display: inline-block;
-        border: $border_params;
-        border-radius: $border_radius;
-        transition: $transition_ease;
-        &:hover{
-            background: $primary_color;
-            color: $secondary_color;
-            cursor: pointer;
+    &.out {
+      transform: scale(1);
+      animation: zoomOut 0.5s 0.25s ease-out forwards;
+      .modal-background {
+        .modal {
+          animation: zoomOut 0.5s ease-out forwards;
         }
+      }
     }
-    h2 {
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 26px;
-        letter-spacing: 6px;
-        align-self: center;
-        border-bottom: $border_params;
-    }
+  }
 }
 
-@mixin workButton{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    top: 70%;
-    text-align: center;
-    opacity: 0;
+@mixin modalBackground {
+  display: table-cell;
+  background: radial-gradient(rgba(0, 105, 117, 0.9), rgba(255, 255, 255, 0));
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin modalInner {
+  color: $primary_color;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+  display: inline-block;
+  border-radius: $border_radius;
+  position: relative;
+  text-align: left;
+  max-width: 800px;
+  max-height: 600px;
+  width: 60vw;
+  height: 80vh;
+}
+
+@mixin modalHeader {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin-bottom: 25px;
+  .close {
+    font-size: 16px;
+    padding: 11px 10px;
+    display: inline-block;
+    border: $border_params;
+    border-radius: $border_radius;
     transition: $transition_ease;
-}
-
-@mixin workButtonAnchor{
-    a {
-        text-decoration: none;
-        padding: 10px 0 10px 5px;
-        font-size: 14px;
-        letter-spacing: 5px;
-        display: block;
-        text-align: center;
-        color: $primary_color;
-        border: $border_params;
-        border-radius: $border_radius;
-        z-index: 1;
-        transition: $transition_ease;
-        &:hover{
-            background: $primary_color;
-            color: $secondary_color;
-        }
+    &:hover {
+      background: $primary_color;
+      color: $secondary_color;
+      cursor: pointer;
     }
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 26px;
+    letter-spacing: 6px;
+    align-self: center;
+    border-bottom: $border_params;
+  }
 }
 
-@mixin modalLg{
-    width: 80vw;
+@mixin workButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  top: 70%;
+  text-align: center;
+  opacity: 0;
+  transition: $transition_ease;
 }
 
-@mixin modalMd{
-    width: 90vw;
-    height: 90vh;
+@mixin workButtonAnchor {
+  a {
+    text-decoration: none;
+    padding: 10px 0 10px 5px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    display: block;
+    text-align: center;
+    color: $primary_color;
+    border: $border_params;
+    border-radius: $border_radius;
+    z-index: 1;
+    transition: $transition_ease;
+    &:hover {
+      background: $primary_color;
+      color: $secondary_color;
+    }
+  }
 }
 
-@mixin modalSm{
-    padding: 20px;
-    width: 95vw;
-    height: 95vh;
+@mixin modalLg {
+  width: 80vw;
+}
+
+@mixin modalMd {
+  width: 90vw;
+  height: 90vh;
+}
+
+@mixin modalSm {
+  padding: 20px;
+  width: 95vw;
+  height: 95vh;
 }
