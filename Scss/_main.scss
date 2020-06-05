@@ -10,6 +10,8 @@
           @include modalHeader;
         }
         #intro-main {
+          height: 90%;
+          overflow: auto;
           img {
             width: 30%;
             float: left;
@@ -252,8 +254,8 @@
               color: $primary_color;
               svg {
                 margin: auto;
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 transition: $transition_ease;
               }
               &:hover #linkedIn {

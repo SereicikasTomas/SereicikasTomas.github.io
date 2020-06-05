@@ -1,198 +1,188 @@
 //Media//
-@media only screen and (max-width: 992px){
-    #main{
-        #modal-intro {
-            .modal-background {
-                .modal {
-                    @include modalLg;
-                }
-            }
+@media only screen and (max-width: 992px) {
+  #main {
+    #modal-intro {
+      .modal-background {
+        .modal {
+          @include modalLg;
         }
-        #modal-work {
-            .modal-background {
-                .modal {
-                    @include modalLg;
-                }
-            }
-        }
-        #modal-about {
-            .modal-background {
-                .modal {
-                    @include modalLg;
-                }
-            }
-        }
-        #modal-contact {
-            .modal-background {
-                .modal {
-                    @include modalLg;
-                }
-            }
-        }
+      }
     }
+    #modal-work {
+      .modal-background {
+        .modal {
+          @include modalLg;
+        }
+      }
+    }
+    #modal-about {
+      .modal-background {
+        .modal {
+          @include modalLg;
+        }
+      }
+    }
+    #modal-contact {
+      .modal-background {
+        .modal {
+          @include modalLg;
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (max-width: 768px){
-    #header{
-        #links {
-            width: 90%;
-            ul {
-                flex-wrap: wrap;
-                li {
-                    border-left: 0;
-                    width: 50%;
-                    &:first-child {
-                        border-bottom: $border_params;
-                    }
-                    &:nth-child(2) {
-                        border-left: $border_params;
-                        border-bottom: $border_params;
-                    }
-                    &:nth-child(4) {
-                        border-left: $border_params;
-                    }
-                }
-            }
+@media only screen and (max-width: 768px) {
+  #header {
+    #links {
+      width: 90%;
+      ul {
+        flex-wrap: wrap;
+        li {
+          border-left: 0;
+          width: 50%;
+          &:first-child {
+            border-bottom: $border_params;
+          }
+          &:nth-child(2) {
+            border-left: $border_params;
+            border-bottom: $border_params;
+          }
+          &:nth-child(4) {
+            border-left: $border_params;
+          }
         }
+      }
     }
-    #main{
-        #modal-intro {
-            .modal-background {
-                .modal {
-                    @include modalMd;
-                    #intro-main{
-                        img{
-                            width: 50%;
-                        }
-                    }
-                }
+  }
+  #main {
+    #modal-intro {
+      .modal-background {
+        .modal {
+          @include modalMd;
+          #intro-main {
+            img {
+              width: 50%;
             }
+          }
         }
-        #modal-work {
-            .modal-background {
-                .modal {
-                    @include modalMd;
-                    #work-main{
-                        grid-template-columns: 100%;
-                        .container{
-                            margin: 5px 0px;
-                        }
-                    }
-                }
-            }
-        }
-        #modal-about {
-            .modal-background {
-                .modal {
-                    @include modalMd;
-                    #about-main{
-                        #skills{
-                            .skill-container{
-                                ul{
-                                    li{
-                                        i{
-                                            font-size: 40px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        #modal-contact {
-            .modal-background {
-                .modal {
-                    @include modalMd;
-                }
-            }
-        }
+      }
     }
-    #footer{
-        width: 100%;
+    #modal-work {
+      .modal-background {
+        .modal {
+          @include modalMd;
+          #work-main {
+            grid-template-columns: 100%;
+            .container {
+              margin: 5px 0px;
+            }
+          }
+        }
+      }
     }
+    #modal-about {
+      .modal-background {
+        .modal {
+          @include modalMd;
+          #about-main {
+            #skills {
+              .skill-container {
+                ul {
+                  li {
+                    i {
+                      font-size: 40px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #modal-contact {
+      .modal-background {
+        .modal {
+          @include modalMd;
+        }
+      }
+    }
+  }
+  #footer {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 480px){
-    #header{
-        width: 95vw;
-        #name{
-            font-size: 10px;
-        }
+@media only screen and (max-width: 480px) {
+  #header {
+    width: 95vw;
+    #name {
+      font-size: 10px;
     }
-    #main{
-        #modal-intro {
-            .modal-background {
-                .modal {
-                    @include modalSm;
-                    #intro-main{
-                        img{
-                            width: 100%;
-                        }
-                    }
-                }
+  }
+  #main {
+    #modal-intro {
+      .modal-background {
+        .modal {
+          @include modalSm;
+          #intro-main {
+            img {
+              width: 100%;
             }
+          }
         }
-        #modal-work{
-            .modal-background {
-                .modal {
-                    @include modalSm;
-                    #work-main{
-                        grid-template-columns: 100%;
-                        .container{
-                            margin: 5px 0px;
-                        }
-                    }
-                }
-            }
-        }
-        #modal-about{
-            .modal-background {
-                .modal {
-                    @include modalSm;
-                    #about-main{
-                        #skills{
-                            .skill-container{
-                                h3{
-                                    font-size: 14px;
-                                }
-                                ul{
-                                    li{
-                                        i{
-                                            font-size: 30px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        #modal-contact{
-            .modal-background {
-                .modal {
-                    @include modalSm;
-                    #contact-main{
-                        #email{
-                            a{
-                                font-size: 14px;
-                            }
-                        }
-                        #social {
-                            a{
-                                height: 60px;
-                                width: 60px;
-                                i{
-                                    font-size: 40px;
-                                    line-height: 60px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+    #modal-work {
+      .modal-background {
+        .modal {
+          @include modalSm;
+          #work-main {
+            grid-template-columns: 100%;
+            .container {
+              margin: 5px 0px;
+            }
+          }
+        }
+      }
+    }
+    #modal-about {
+      .modal-background {
+        .modal {
+          @include modalSm;
+          #about-main {
+            #skills {
+              .skill-container {
+                h3 {
+                  font-size: 14px;
+                }
+                ul {
+                  li {
+                    i {
+                      font-size: 30px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #modal-contact {
+      .modal-background {
+        .modal {
+          @include modalSm;
+          #contact-main {
+            #email {
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

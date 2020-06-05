@@ -608,6 +608,11 @@ template {
   border-bottom: 1px solid white;
 }
 
+#main #modal-intro .modal-background .modal #intro-main {
+  height: 90%;
+  overflow: auto;
+}
+
 #main #modal-intro .modal-background .modal #intro-main img {
   width: 30%;
   float: left;
@@ -1193,8 +1198,8 @@ template {
 
 #main #modal-contact .modal-background .modal #contact-main #social a svg {
   margin: auto;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -1542,14 +1547,6 @@ template {
   }
   #main #modal-contact .modal-background .modal #contact-main #email a {
     font-size: 14px;
-  }
-  #main #modal-contact .modal-background .modal #contact-main #social a {
-    height: 60px;
-    width: 60px;
-  }
-  #main #modal-contact .modal-background .modal #contact-main #social a i {
-    font-size: 40px;
-    line-height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */
