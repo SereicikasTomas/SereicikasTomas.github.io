@@ -408,7 +408,7 @@ template {
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(8vh + 1px);
+  height: calc(8vh + 2px);
   background: white;
   top: 100%;
 }
@@ -510,7 +510,7 @@ template {
   position: absolute;
   left: 50%;
   width: 1px;
-  height: calc(8vh + 1px);
+  height: calc(8vh + 2px);
   background: white;
   bottom: 100%;
 }
